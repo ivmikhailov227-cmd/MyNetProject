@@ -1,0 +1,2 @@
+﻿Project3.1.obj : error LNK2005: main already defined in File1.obj
+C:\Users\User\source\repos\Project3.1\x64\Debug\Project3.1.exe : fatal error LNK1169: one or more multiply defined symbols found
