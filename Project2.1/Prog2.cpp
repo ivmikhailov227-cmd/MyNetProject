@@ -16,8 +16,11 @@ void displayAccount(Account& acc) {
 	std::cin >> acc.name;
 	std::cout << "Enter Your Balance:"  << std::endl;
 	std::cin >> acc.balance;
-	std::cout << "Enter Your New Balance:" << std::endl;
-	std::cin >> acc.newBalance;
+	
+}
+
+void changeBalance(Account& acc, double newBalance) {
+	acc.balance = newBalance;
 }
 
 void run_prog2() {
@@ -25,5 +28,12 @@ void run_prog2() {
 	Account acc;
 	displayAccount(acc);
 
-	std::cout << "Your Account: " << acc.id << ", " << acc.name << ", " << acc.newBalance << std::endl;
+	double newBalance;
+	std::cout << "Enter Your New Balance: ";
+	std::cin >> newBalance;
+
+	changeBalance(acc, newBalance);
+
+	std::cout << "Your Account: " << acc.id << ", " << acc.name
+		<< ", Balance = " << acc.balance << std::endl;
 }
